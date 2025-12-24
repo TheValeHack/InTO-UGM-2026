@@ -84,7 +84,7 @@ export default function PaketDewekan() {
   return (
     <div className="w-full overflow-hidden">
       <Navbar className={"navbar"} session={session} />
-      <div className="max-w-[1950px] mx-auto flex flex-col w-screen relative">
+      <div className="max-w-[2160px] mx-auto flex flex-col w-screen relative">
         <section
           id="paket"
           className="w-full min-h-[75vh] py-32 flex flex-col justify-start items-center relative"
