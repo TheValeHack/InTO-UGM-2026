@@ -1,0 +1,20 @@
+[
+  {
+    "id": "dewekan",
+    "name": "Dewekan",
+    "desc": "Try Out, Pembahasan Try Out, University Fair, Prediksi Peluang Masuk, Live Class, Rekomendasi Jurusan, Talkshow, Konsumsi",
+    "price": 43000
+  },
+  {
+    "id": "betigo",
+    "name": "Betigo (3 Orang)",
+    "desc": "Try Out, Pembahasan Try Out, University Fair, Prediksi Peluang Masuk, Live Class, Rekomendasi Jurusan, Talkshow, Konsumsi",
+    "price": 111000
+  },
+  {
+    "id": "belimo",
+    "name": "Belimo (5 Orang)",
+    "desc": "Try Out, Pembahasan Try Out, University Fair, Prediksi Peluang Masuk, Live Class, Rekomendasi Jurusan, Talkshow, Konsumsi",
+    "price": 220000
+  }
+]
