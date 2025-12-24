@@ -9,7 +9,7 @@ import { emailQueue } from '@/lib/queue';
 let coreApi = new Midtrans.CoreApi({
   isProduction: process.env.IS_PRODUCTION === 'true',
   serverKey: process.env.SECRET,
-  clientKey: process.env.NEXT_PUBLIC_CLIENT,
+  clientKey: process.env.MIDTRANS_CLIENT_KEY,
 });
 
 export async function POST(req) {

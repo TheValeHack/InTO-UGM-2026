@@ -53,14 +53,28 @@ export default function PaketBelimo() {
     if (!isLoading && !session) {
       router.push("/");
     }
-    const snapScript = process.env.NEXT_PUBLIC_SNAP_URL;
-    const clientKey = process.env.NEXT_PUBLIC_CLIENT;
-    const script = document.createElement("script");
-    script.src = snapScript;
-    script.setAttribute("data-client-key", clientKey);
-    script.async = true;
 
-    document.body.appendChild(script);
+    async function loadMidtrans() {
+      try {
+        const configRes = await fetch("/api/config/midtrans");
+        const { clientKey, snapUrl } = await configRes.json();
+
+        const script = document.createElement("script");
+        script.src = snapUrl;
+        script.setAttribute("data-client-key", clientKey);
+        script.async = true;
+
+        document.body.appendChild(script);
+
+        return () => {
+          document.body.removeChild(script);
+        };
+      } catch (error) {
+        console.error("Failed to load Midtrans config:", error);
+      }
+    }
+
+    const cleanupMidtrans = loadMidtrans();
 
     async function fetchPaketData() {
       try {
@@ -80,7 +94,7 @@ export default function PaketBelimo() {
     fetchPaketData();
 
     return () => {
-      document.body.removeChild(script);
+      cleanupMidtrans.then((cleanup) => cleanup && cleanup());
     };
   }, [isLoading, session, router]);
 
