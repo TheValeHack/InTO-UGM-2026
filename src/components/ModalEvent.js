@@ -10,7 +10,7 @@ export default function ModalEvent({ state, setState, children }) {
                 </div>
             </div>
             <div className="text-justify text-xs md:text-base mt-3 sm:mt-3 text-[#591D6A] px-3 md:px-0">
-                Siap jadi bagian dari Universitas Gadjah Mada? Into UGM 2026 hadir dengan rangkaian kegiatan lengkap untuk membantu Sobat InTO mewujudkan mimpi masuk kampus impian!
+                Punya impian kuliah di Universitas Gadjah Mada? InTO UGM 2026 hadir dengan beragam kegiatan seru dan bermanfaat untuk bantu kamu mewujudkan cita-cita masuk kampus impian!
             </div>
             <div className="flex flex-col gap-2 sm:gap-1 w-full mt-4 sm:mt-3 px-3 md:px-0">
                 {children}
