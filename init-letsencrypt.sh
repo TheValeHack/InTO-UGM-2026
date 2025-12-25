@@ -37,15 +37,19 @@ echo "Waiting for nginx to start..."
 sleep 5
 
 echo "### Deleting dummy certificate for $domain ..."
-rm -rf "$data_path/conf/live/$domain" "$data_path/conf/archive/$domain" "$data_path/conf/renewal/$domain.conf"
+sudo rm -rf "$data_path/conf/live/$domain" "$data_path/conf/archive/$domain" "$data_path/conf/renewal/$domain.conf"
 
 echo "### Requesting real Let's Encrypt certificate for $domain ..."
-docker compose run --rm certbot certonly --webroot -w /var/www/certbot \
+if ! docker compose run --rm certbot certonly --webroot -w /var/www/certbot \
     --email "$email" \
     -d "$domain" \
     --agree-tos \
     --force-renewal \
-    --non-interactive
+    --non-interactive; then
+  echo "### ERROR: Certbot failed to obtain a certificate."
+  echo "Please check if your domain $domain points to this server's IP and port 80 is open."
+  exit 1
+fi
 
 echo "### Reloading nginx ..."
 docker compose exec nginx nginx -s reload
