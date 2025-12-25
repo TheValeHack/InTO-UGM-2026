@@ -54,21 +54,21 @@ export default function PaymentSuccess() {
                   Pastikan Sobat InTO telah menerima email tiket dalam 1x24 jam. Jika belum, mohon segera menghubungi contact person di bawah ini.
                   <br />
                   <br />
-                  📞 Hazel (
+                  📞 Steven (
                   <span
                     className="cursor-pointer hover:text-[#874e28]"
-                    onClick={() => window.open("https://wa.me/6289684345697", "_blank")}
+                    onClick={() => window.open("https://wa.me/6287753285015", "_blank")}
                   >
-                    +6289684345697
+                    +6287753285015
                   </span>
                   )
                   <br />
-                  📞 Jelsya (
+                  📞 Miftah (
                   <span
                     className="cursor-pointer hover:text-[#874e28]"
-                    onClick={() => window.open("https://wa.me/6285788644309", "_blank")}
+                    onClick={() => window.open("https://wa.me/62881080637374", "_blank")}
                   >
-                    +6285788644309
+                    +62881080637374
                   </span>
                   )
                   <br />

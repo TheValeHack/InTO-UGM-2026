@@ -10,7 +10,7 @@ export default function ModalDetailPaket({ className, state, setState, packageNa
                 </div>
                 <div className="text-[10px] sm:text-sm font-medium text-[#591D6A] text-center">
                     <span className="font-bold">Harap diperhatikan</span>, jika ada kesalahan dalam penulisan E-Mail dapat menghubungi Contact Person :
-                    Jelsya (<span className="font-bold cursor-pointer hover:text-[#3c1147]" onClick={() => window.open("https://wa.me/6285788644309", "_blank")}>+6285788644309</span>) / Hazel (<span className="font-bold cursor-pointer hover:text-[#874e28]" onClick={() => window.open("https://wa.me/6289684345697", "_blank")}>+6289684345697</span>)
+                    Miftah (<span className="font-bold cursor-pointer hover:text-[#3c1147]" onClick={() => window.open("https://wa.me/62881080637374", "_blank")}>+62881080637374</span>) / Steven (<span className="font-bold cursor-pointer hover:text-[#874e28]" onClick={() => window.open("https://wa.me/6287753285015", "_blank")}>+6287753285015</span>)
                 </div>
                 <div className="w-full h-[1px] bg-[#591D6A]"></div>
                 {

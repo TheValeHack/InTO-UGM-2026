@@ -310,7 +310,7 @@ export default function Home() {
           </section>
           <section id="testi" className="w-full min-h-[75vh] md:py-20 flex flex-col justify-center items-center relative">
             <div className="px-6 md:px-12 lg:px-16 py-24 w-full relative">
-              <BannerTitle text={'Apa Kata Mereka?!'} className={'text-2xl md:text-5xl px-8 py-2 mx-auto'} strokeClassName={'px-8 py-2'} color="red" />
+              <BannerTitle text={'Apa Kata Mereka?!'} className={'text-2xl md:text-5xl px-8 py-2 mx-auto mt-2'} strokeClassName={'px-8 py-2'} color="red" />
               <div className="mt-12 flex flex-col xl:flex-row justify-center items-center gap-9 lg:gap-5">
                 {
                   testiData.map((testi, i) => {
@@ -361,23 +361,23 @@ export default function Home() {
                 className="top-0 left-0"
                 startPos={{ x: 300, y: 250 }}
               />
-              <div data-aos="fade-up" data-aos-duration="1000" className="relative w-full lg:w-[80%] lg:min-w-[650px] max-w-[880px] z-30 mx-auto">
+              <div data-aos="fade-up" data-aos-duration="1000" className="relative w-full lg:w-[80%] lg:min-w-[700px] max-w-[920px] z-30 mx-auto">
                 <BannerTitle text={'Berkolaborasi Bersama'} className={'translate-y-[120%] md:translate-y-[80%] text-2xl lg:text-5xl px-8 py-2 mx-auto z-50'} strokeClassName={'px-8 py-2'} color="red" />
                 <BluePanel type={1} className="w-full p-3 px-12 pb-14 pt-16 lg:pb-[60px] flex items-start justify-center rounded-[60px] relative">
                   <div className="py-4 w-full h-full rounded-[48px] relative">
                     <div className="mx-auto max-w-[300px] sm:max-w-max flex flex-col lg:flex-row gap-1 md:gap-4 items-stretch ">
                       <div className="w-full sm:w-fit mx-auto relative flex flex-col justify-between items-center rounded-3xl">
                         <Image
-                          src="/images/ruangguru-black.png"
+                          src="/images/pahamify-circle.png"
                           width={1000}
                           height={1000}
                           alt="gambar logo"
-                          className="w-[70%] md:w-[75%]"
+                          className="w-[85%] md:w-full"
                         />
-                        <BubbleButton onClick={() => window.open('https://ruangguru.com', '_blank')} scale={3} color="pink" className={'text-xl md:text-2xl min-w-full md:min-w-64 py-6 md:py-3 mt-2 md:mt-5'}>Sponsor dan Partnership</BubbleButton>
+                        <BubbleButton onClick={() => window.open('https://pahamify.com', '_blank')} scale={3} color="pink" className={'text-xl md:text-2xl min-w-full md:min-w-64 py-6 md:py-3 mt-2 md:mt-5'}>Sponsor dan Partnership</BubbleButton>
                       </div>
                       <div className="flex-1 rounded-3xl font-medium text-sm lg:text-lg text-justify text-white flex items-center">
-                        Ruangguru sebagai layanan bimbingan belajar nomor 1 di Indonesia penyedia akses pembelajaran berbasis teknologi, termasuk kelas virtual, platform ujian online, video belajar pembelajaran, marketplace les private, dan lainnya. Sejak 2014 kualitas soal yang telah dipercaya oleh 22.000.000 pengguna tentu dapat mendukung Sobat InTO dalam memperjuangkan PTN impian!
+                        Pahamify adalah platform pembelajaran yang dikenal dengan penyajian materi yang jelas, interaktif, dan mudah dipahami oleh siswa. Melalui berbagai fitur seperti video konsep, latihan soal, rangkuman, serta tryout terpadu, Pahamify membantu meningkatkan efektivitas belajar dan pemahaman materi secara menyeluruh. Dengan kualitas konten yang terus dikembangkan, Pahamify diharapkan dapat menjadi mitra yang mendukung Sobat InTO dalam mempersiapkan diri menghadapi ujian dan meraih PTN impian.
                       </div>
                     </div>
                   </div>

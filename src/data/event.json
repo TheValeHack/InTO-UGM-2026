@@ -3,28 +3,25 @@
         "id": "try_out",
         "title": "Try Out",
         "content": [
-            "Pembahasan soal TryOut lengkap dengan teks",
-            "Prediksi Peluang Masuk Kampus Berdasarkan Hasil TryOut",
-            "Live Class",
-            "Rekomendasi Jurusan",
-            "Hasil IRT",
+            "Try Out Saintek/Soshum",
+            "Prediksi peluang masuk berdasarkan hasil TO",
+            "Penilaian IRT",
             "Grafik Nilai TryOut",
-            "Analisis dan Rekomendasi Materi yang Harus Dikuasai",
-            "Variasi Soal UTBK/UM Ter-update dan Prediktif",
-            "1x Tryout Premium Ruangguru",
-            "Tryout Ujian Mandiri Saintek atau Soshum",
-            "Analisis Peluang SNBP dengan NIlai Rapor",
-            "Recorded Live Class"
+            "Rekomendasi Jurusan",
+            "Analisis Peluang SNBT",
+            "Variasi soal UTBK",
+            "Rasionalisasi Kampus",
+            "Leaderboard Nasional dan Rekomendasi Materi"
         ]
     },
     {
         "id": "university_fair",
         "title": "University Fair",
-        "content": "Kupas tuntas rasa penasaranmu tentang 18 Fakultas dan 1 Sekolah hingga berbagai fasilitas akademik & non-akademik di Universitas Gadjah mada melalui stan yang tersedia. Kepoin jurusan impian dan informasi lainnya tentang UGM, Unit Kegiatan Mahasiswa, Fakultas, Beasiswa, Program Studi hingga dinamika perkuliahan secara langsung bersama mahasiswa dan mahasiswi Universitas Gadjah Mada!"
+        "content": "Penuhi rasa ingin tahumu mengenai 18 Fakultas dan 1 Sekolah di UGM beserta beragam fasilitas akademik dan non-akademik yang tersedia. Jelajahi setiap stan untuk mengetahui jurusan yang kamu minati dan memperoleh informasi lengkap tentang UGM, termasuk Unit Kegiatan Mahasiswa, fakultas, beasiswa, dan program studi, hingga gambaran kehidupan perkuliahan yang dibagikan langsung oleh para mahasiswa. Mari hadir dan temukan pengalaman seru sambil mengenal UGM lebih dekat!"
     },
     {
         "id": "talkshow_inspiratif",
         "title": "Talkshow Inspiratif",
-        "content": "Temukan motivasi, berinteraksi secara langsung dan bangkitkan semangatmu dalam meraih impian bersama sesi talkshow dengan bintang tamu inspiratif di InTO UGM 2026!"
+        "content": "Temukan inspirasi, bertukar gagasan secara langsung, dan bangkitkan kembali semangatmu untuk meraih impian melalui sesi talkshow yang menghadirkan narasumber penuh motivasi di InTO UGM 2026!"
     }
 ]
