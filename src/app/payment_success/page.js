@@ -24,12 +24,12 @@ export default function PaymentSuccess() {
   }, [isLoading, session, router, fetchTransactionDetails, isProcessing, isLoadingPaymentStatus]);
 
   useEffect(() => {
-    if (lastOrder?.payment_status === "paid") {
-      //
-    } else {
-      router.back();
+    if (!isLoadingPaymentStatus) {
+      if (lastOrder?.payment_status !== "paid") {
+        router.back();
+      }
     }
-  }, [lastOrder, router]);
+  }, [lastOrder, router, isLoadingPaymentStatus]);
 
   if (isLoading || isLoadingPaymentStatus) {
     return <></>;
