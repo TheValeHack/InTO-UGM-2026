@@ -1,0 +1,21 @@
+{
+    "name": "InTO UGM 2026",
+    "short_name": "InTO UGM",
+    "description": "Terangi Jalanmu Menuju Bulaksumur",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FAE6FF",
+    "theme_color": "#591D6A",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/images/logo-2026.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

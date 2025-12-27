@@ -40,8 +40,39 @@ const helvetica = localFont({
 })
 
 export const metadata = {
-  title: "InTO UGM 2026",
-  description: "InTO UGM 2026",
+  metadataBase: new URL("https://intougm2026.com"),
+  title: {
+    default: "InTO UGM 2026",
+    template: "%s | InTO UGM 2026",
+  },
+  description: "InTO UGM 2026 - Terangi Jalanmu Menuju Bulaksumur. Rangkaian kegiatan Try Out, University Fair, dan Talkshow Inspiratif untuk talenta muda Sumatera Selatan.",
+  keywords: ["InTO UGM", "UGM 2026", "Try Out UGM", "IKAGAMASS", "Palembang", "Sumatera Selatan", "Universitas Gadjah Mada"],
+  authors: [{ name: "IKAGAMASS UGM" }],
+  creator: "IKAGAMASS UGM",
+  publisher: "IKAGAMASS UGM",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "InTO UGM 2026",
+    description: "Terangi Jalanmu Menuju Bulaksumur. Rangkaian kegiatan Try Out, University Fair, dan Talkshow Inspiratif.",
+    url: "https://intougm2026.com",
+    siteName: "InTO UGM 2026",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "InTO UGM 2026",
+    description: "Terangi Jalanmu Menuju Bulaksumur. Rangkaian kegiatan Try Out, University Fair, dan Talkshow Inspiratif.",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
