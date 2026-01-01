@@ -198,7 +198,7 @@ export default function HomeClient() {
               className="absolute top-32 right-0 w-32 md:w-48"
             />
             <div className="px-6 md:px-12 lg:px-16 w-full z-30">
-              <Gallery className={'mx-auto'} images={[{ src: '/images/1.png', tag: 2020 }, { src: '/images/2.jpg', tag: 2022 }, { src: '/images/3.jpg', tag: 2023 }, { src: '/images/4.jpg', tag: 2024 }, { src: '/images/5.png', tag: 2025 }]} />
+              <Gallery className={'mx-auto'} images={[{ src: '/images/1.png', tag: 2020 }, { src: '/images/2.jpg', tag: 2022 }, { src: '/images/3.jpg', tag: 2023 }, { src: '/images/4.jpg', tag: 2024 }, { src: '/images/2025.jpg', tag: 2025 }, { src: '/images/5.png', tag: 2026 }]} />
             </div>
             <Image
               src={'/images/clover-left.png'}

@@ -46,12 +46,12 @@ export default function Footer() {
             />
           </a>
         </div>
-        {/* <div className="flex flex-col justify-center items-center">
-          <div className="font-bold text-white  text-xs md:text-base">intougm2025@gmail.com</div>
-          <div className="font-bold text-white  text-xs md:text-base">Kamu punya pertanyaan? Hubungi :</div>
+        <div className="flex flex-col justify-center items-center">
+          <div className="text-white  text-xs md:text-base">intougm2026@gmail.com</div>
+          <div className="text-white  text-xs md:text-base">Kamu punya pertanyaan? Hubungi :</div>
           <div className="text-white text-xs md:text-base cursor-pointer hover:text-slate-200" onClick={() => window.open("https://wa.me/62881080637374", "_blank")}>Miftah (+62881080637374)</div>
           <div className="text-white text-xs md:text-base cursor-pointer hover:text-slate-200" onClick={() => window.open("https://wa.me/6287753285015", "_blank")}>Steven (+6287753285015)</div>
-        </div> */}
+        </div>
         <div className="text-white  text-xs md:text-base">Copyright @InTO UGM 2026</div>
       </div>
     </div>

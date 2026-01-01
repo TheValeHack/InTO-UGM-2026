@@ -95,7 +95,19 @@ export default function Navbar({ className, session, modalLogin, setModalLogin }
                 <BubbleButton
                   scale={2}
                   color="default"
-                  className={"text-base md:text-2xl min-w-28 md:min-h-12 md:min-w-36 translate-x-2 md:translate-x-0"}
+                  className={"text-base hidden lg:block md:text-2xl min-w-28 md:min-h-12 md:min-w-36 translate-x-2 md:translate-x-0"}
+                  onClick={() => {
+                    setModalProfile(!modalProfile)
+                  }}
+                >
+                  {session.user.name.length > 12
+                    ? `${session.user.name.slice(0, 12)}...`
+                    : session.user.name}
+                </BubbleButton>
+                <BubbleButton
+                  scale={2}
+                  color="default"
+                  className={"text-base block lg:hidden md:text-2xl min-w-28 md:min-h-12 md:min-w-36 translate-x-2 md:translate-x-0"}
                   onClick={() => setDropdown(!dropdown)}
                 >
                   {session.user.name.length > 12
