@@ -38,7 +38,33 @@ export async function POST(req) {
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return new Response(JSON.stringify({ error: 'Email is already registered.' }), { status: 400 });
+      if (existingUser.is_verified) {
+        return new Response(JSON.stringify({ error: 'Email is already registered.' }), { status: 400 });
+      }
+
+      // If not verified, update user info and send new token
+      existingUser.name = name;
+      existingUser.password = password; // Will be hashed by pre-save hook
+      existingUser.school = school;
+      existingUser.phone = cleanedPhone;
+      await existingUser.save();
+
+      // Delete old tokens
+      await VerificationToken.deleteMany({ userId: existingUser._id });
+
+      const token = crypto.randomBytes(32).toString('hex');
+      const verificationToken = new VerificationToken({ userId: existingUser._id, token });
+      await verificationToken.save();
+
+      await emailQueue.add('verification', {
+        type: 'verification',
+        payload: { email, token },
+      });
+
+      return new Response(
+        JSON.stringify({ message: 'User updated. Please verify your email with the new link sent.' }),
+        { status: 200 }
+      );
     }
 
     const newUser = new User({ name, email, password, school, phone: cleanedPhone });
