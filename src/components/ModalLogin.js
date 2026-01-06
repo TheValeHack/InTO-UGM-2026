@@ -16,6 +16,8 @@ export default function ModalLogin({ className, state, setState, setRegisterStat
   const [isChecked, setIsChecked] = useState(false);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false)
+  const [resendStatus, setResendStatus] = useState(null); // 'loading', 'success', 'error'
+  const [resendMessage, setResendMessage] = useState("");
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const handleToggle = () => {
@@ -72,6 +74,31 @@ export default function ModalLogin({ className, state, setState, setRegisterStat
     }
   };
 
+  const handleResendVerification = async () => {
+    setResendStatus("loading");
+    setResendMessage("");
+    try {
+      const response = await fetch("/api/resendVerificationEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: formData.email }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setResendStatus("success");
+        setResendMessage(data.message);
+      } else {
+        setResendStatus("error");
+        setResendMessage(data.error || "Gagal mengirim ulang email.");
+      }
+    } catch (error) {
+      console.error(error);
+      setResendStatus("error");
+      setResendMessage("Terjadi kesalahan tak terduga.");
+    }
+  };
+
   const handleClose = () => {
     setError(null)
     setFormData({
@@ -84,7 +111,28 @@ export default function ModalLogin({ className, state, setState, setRegisterStat
   return (
     <Modal title={"Login"} state={state} setState={setState} className={className} customClose={handleClose} panelClassName="min-h-fit">
       <div className="flex flex-col sm:gap-4 w-full justify-center px-1 md:px-0 -translate-x-1 md:-translate-x-0">
-        {error && <p className="text-red-500 text-[10px] sm:text-sm">{error}</p>}
+        {error && (
+          <div className="flex flex-col gap-1">
+            <p className="text-red-500 text-[10px] sm:text-sm">{error}</p>
+            {error.includes("Verifikasi email") && (
+              <div className="flex flex-col gap-2">
+                <button
+                  onClick={handleResendVerification}
+                  disabled={resendStatus === "loading"}
+                  className="text-[#CB5FE9] hover:text-[#b048cc] text-[10px] sm:text-sm font-semibold underline w-fit"
+                >
+                  {resendStatus === "loading" ? "Mengirim..." : "Kirim ulang email verifikasi"}
+                </button>
+                {resendStatus === "success" && (
+                  <p className="text-green-600 text-[10px] sm:text-sm">{resendMessage}</p>
+                )}
+                {resendStatus === "error" && (
+                  <p className="text-red-500 text-[10px] sm:text-sm">{resendMessage}</p>
+                )}
+              </div>
+            )}
+          </div>
+        )}
         <div className="w-full">
           <label className="text-[10px] sm:text-sm text-[#591D6A]">Username (E-mail)</label>
           <BubbleInput
