@@ -118,7 +118,7 @@ export async function POST(req) {
       const sheetName = 'Peserta';
       const now = new Date();
       const timestamp = new Date(now.getTime() + 7 * 60 * 60 * 1000).toISOString().replace('T', ' ').slice(0, 19);
-      const whatsappGroupLink = "http://chat.whatsapp.com/LJmhEwUkFIy18uKunf2mdw";
+      const whatsappGroupLink = "https://chat.whatsapp.com/Bp71C0cPmhc1BfgiZqQz0K";
 
       const participantData = [
         participant._id.toString(),
@@ -164,7 +164,7 @@ export async function POST(req) {
 
         Kami juga mengundangmu untuk bergabung ke grup WhatsApp resmi kami, di mana kamu akan mendapatkan informasi dan pembaruan lebih lanjut mengenai tryout. Silakan klik tautan di bawah ini untuk bergabung:
 
-        http://chat.whatsapp.com/LJmhEwUkFIy18uKunf2mdw
+        https://chat.whatsapp.com/Bp71C0cPmhc1BfgiZqQz0K
 
         Jika ada pertanyaan, jangan ragu untuk menghubungi kami. Semoga sukses dan sampai bertemu di tryout!
 
