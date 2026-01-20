@@ -88,7 +88,7 @@ export default function HomeClient() {
   return (
     isLoading ? <></> :
       <div className="w-full overflow-hidden relative">
-        {/* <ModalGuest state={modalGuest} setState={setModalGuest} /> */}
+        <ModalGuest state={modalGuest} setState={setModalGuest} />
         <ModalEvent state={modalEvent} setState={setModalEvent}>
           <BubbleButton color="default" onClick={() => setModalEventDetail1(!modalEventDetail1)} scale={4} className={'text-lg sm:text-3xl min-w-full py-1 md:py-4'}>Try Out</BubbleButton>
           <BubbleButton color="pink" onClick={() => setModalEventDetail2(!modalEventDetail2)} scale={4} className={'text-lg sm:text-3xl min-w-full py-1 md:py-4'}>University Fair</BubbleButton>
