@@ -11,7 +11,7 @@ export async function GET(req) {
 
     const packages = await Package.find({}, { _id: 1, name: 1, desc: 1, price: 1, max_participants: 1 });
 
-    const packageOrder = ['Dewekan', 'Betigo', 'Belimo'];
+    const packageOrder = ['Dewekan', 'Dewekan Kahf', 'Betigo', 'Belimo'];
     packages.sort((a, b) => {
       return packageOrder.indexOf(a.name) - packageOrder.indexOf(b.name);
     });
