@@ -90,9 +90,9 @@ export async function POST(req) {
         );
       }
 
-      if (packageName.toLowerCase() !== "dewekan") {
+      if (packageName.toLowerCase() !== "dewekan" && packageName.toLowerCase() !== "dewekan kahf") {
         return new Response(
-          JSON.stringify({ success: false, error: "Voucher hanya berlaku untuk paket Dewekan." }),
+          JSON.stringify({ success: false, error: "Voucher hanya berlaku untuk paket Dewekan dan Dewekan Kahf." }),
           { status: 400 }
         );
       }

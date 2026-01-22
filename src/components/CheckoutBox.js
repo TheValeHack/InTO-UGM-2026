@@ -110,7 +110,7 @@ export default function CheckoutBox({ className, name, desc, price, kode, valida
             <span className="text-[#FF7DA7] font-semibold">Paket {name}</span> berisi : {desc}
           </div>
           {
-            name == "Dewekan" && (
+            ["Dewekan", "Dewekan Kahf"].includes(name) && (
               <form className="w-full" onSubmit={handleVoucherSubmit}>
                 <label className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-white">Masukkan Voucher (Opsional)</label>
                 <div className="flex items-center gap-1 sm:gap-2">
@@ -141,7 +141,7 @@ export default function CheckoutBox({ className, name, desc, price, kode, valida
               <div className="">Rp{formatCurrency(price)}</div>
             </div>
             {
-              name == "Dewekan" && (
+              ["Dewekan", "Dewekan Kahf"].includes(name) && (
                 <div className="w-full flex justify-between mt-2">
                   <div className="">Potongan Voucher</div>
                   <div className="">Rp{formatCurrency(discount)}</div>
