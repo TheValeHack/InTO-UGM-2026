@@ -19,7 +19,7 @@ import ModalGuest from "@/components/ModalGuest";
 import BluePanel from "@/components/BluePanel";
 import Butterfly from "@/components/Butterfly";
 
-// Static package data
+// Static package data untuk vercel
 const paketData = [
   {
     name: "Dewekan",
