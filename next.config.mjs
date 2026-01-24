@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'standalone',
-    experimental: {
-        instrumentationHook: true,
-    }
+    // Removed 'standalone' output for standard Vercel deployment
 };
 
 export default nextConfig;

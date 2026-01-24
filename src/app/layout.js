@@ -1,8 +1,6 @@
 import localFont from 'next/font/local'
 import "./globals.css";
 import AOSProvider from "@/components/AOSProvider";
-import CustomSessionProvider from "@/components/CustomSessionProvider";
-import { TransactionProvider } from "@/contexts/TransactionContext";
 
 const hentEunoyalk = localFont({
   src: '../../public/fonts/HentEunoyalk/Hent Eunoyalk.ttf',
@@ -81,14 +79,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${helvetica.variable} ${hentEunoyalk.variable} font-helvetica antialiased bg-[#FAE6FF]`}
       >
-        <CustomSessionProvider>
-          <AOSProvider>
-            <TransactionProvider>
-              {children}
-            </TransactionProvider>
-          </AOSProvider>
-        </CustomSessionProvider>
-
+        <AOSProvider>
+          {children}
+        </AOSProvider>
       </body>
     </html>
   );
