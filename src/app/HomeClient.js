@@ -295,11 +295,7 @@ export default function HomeClient() {
                     paketData.map((paket, i) => (
                       <Paket key={i} name={paket.name == "Betigo" ? "Betigo (3 Orang)" : paket.name == "Belimo" ? "Belimo (5 Orang)" : paket.name} desc={paket.desc} price={paket.price} onClick={
                         () => {
-                          if (session?.user) {
-                            router.push(`/paket_${paket.name.toLowerCase().replace(/ /g, '_')}`)
-                          } else {
-                            setModalLogin(true)
-                          }
+                          router.push('/thanks-end')
                         }
                       } />
                     ))

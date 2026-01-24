@@ -15,28 +15,28 @@ export default function Thanks() {
   const isLoading = status === "loading";
   const router = useRouter();
 
-  useEffect(() => {
-    if (!isLoading && session && !isProcessing && isLoadingPaymentStatus) {
-      fetchTransactionDetails();
-    } else if (!isLoading && !session) {
-      router.push("/");
-    }
-  }, [isLoading, session, router, fetchTransactionDetails, isProcessing, isLoadingPaymentStatus]);
+  // useEffect(() => {
+  //   if (!isLoading && session && !isProcessing && isLoadingPaymentStatus) {
+  //     fetchTransactionDetails();
+  //   } else if (!isLoading && !session) {
+  //     router.push("/");
+  //   }
+  // }, [isLoading, session, router, fetchTransactionDetails, isProcessing, isLoadingPaymentStatus]);
 
-  useEffect(() => {
-    if (lastOrder?.payment_status === "pending") {
-      router.back();
-    } else if (lastOrder?.payment_status !== "paid") {
-      router.push("/");
-    }
-  }, [lastOrder, router]);
+  // useEffect(() => {
+  //   if (lastOrder?.payment_status === "pending") {
+  //     router.back();
+  //   } else if (lastOrder?.payment_status !== "paid") {
+  //     router.push("/");
+  //   }
+  // }, [lastOrder, router]);
 
-  if (isLoading || isLoadingPaymentStatus) {
-    return <></>;
-  }
+  // if (isLoading || isLoadingPaymentStatus) {
+  //   return <></>;
+  // }
 
   return (
-    session && (
+    true && (
       <div className="w-full overflow-hidden">
         <Navbar className={"navbar"} session={session} />
         <div className="max-w-[2160px] mx-auto flex flex-col w-screen relative">
@@ -48,7 +48,7 @@ export default function Thanks() {
               <div className="flex flex-col items-center gap-7">
                 <GradientTitle title1="Terima" title2="Kasih" />
                 <div className="w-full max-w-[800px] text-sm sm:text-base md:text-xl text-center text-[#591D6A]">
-                  Terima kasih telah berpartisipasi dalam InTO UGM 2026, sampai jumpa di InTO UGM 2026!!!
+                  Terima kasih telah berpartisipasi dalam InTO UGM 2026, sampai jumpa di InTO UGM 2027!!!
                   <br />
                   <br />
                   <BubbleButton
